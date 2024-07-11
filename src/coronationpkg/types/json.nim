@@ -103,12 +103,21 @@ type
   JsonStructures* = seq[JsonStructure]
 
   JsonHeader* = ref object
+<<<<<<< Updated upstream
     version_major*: int
     version_minor*: int
     version_patch*: int
     version_status*: string
     version_build*: string
     version_full_name*: string
+=======
+    version_major*: int #	4
+    version_minor*: int #	3
+    version_patch*: int #	0
+    version_status*: string #	"beta"
+    version_build*: string #	"arch_linux"
+    version_full_name*: string # "Godot Engine v4.3.beta.arch_linux"
+>>>>>>> Stashed changes
 
   JsonAPI* = ref object
     header*: JsonHeader

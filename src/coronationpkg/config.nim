@@ -5,7 +5,32 @@ import submodules/semanticstrings
 type BuildConfig* {.requiresinit.} = object
   outdir*: string
   apisource*: string
+<<<<<<< Updated upstream
   package*: string
+=======
+
+proc resolve*(conf: BuildConfig): BuildConfig =
+  BuildConfig(
+    outdir: case conf.outdir:
+    of AutoDetect:
+      "out/godot"
+    else:
+      conf.outdir
+    ,
+    project: case conf.project:
+    of AutoDetect:
+      "godot"
+    else:
+      conf.project
+    ,
+    apisource: case conf.apisource:
+    of AutoDetect:
+      raise newException(BuildConfigResolveError, "`apisource` MUST be specified.")
+    else:
+      conf.apisource
+  )
+
+>>>>>>> Stashed changes
 
 type
   IgnoreConf* = object
