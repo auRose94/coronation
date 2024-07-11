@@ -143,7 +143,6 @@ proc project(config: BuildConfig; api: JsonAPI): ProjectRoot =
                 weave_properties class
                 weave_vmap(class)
 
-<<<<<<< Updated upstream
     weave config.package.nimble: &"""
 # Package
 
@@ -152,24 +151,6 @@ author        = "coronation written by godot-nim, la.panon."
 description   = "A GDExtension binding"
 license       = "MIT"
 srcDir        = "src"
-=======
-    weave config.project.nimble:
-      "# Package"
-      ""
-      &"version       = \"{version}\""
-      "author        = \"godot-coronation by la.panon.\""
-      "description   = \"A GDExtension binding\""
-      "license       = \"MIT\""
-      "srcDir        = \"src\""
-      ""
-      ""
-      "# Dependencies"
-      ""
-      "requires \"nim >= 2.0.0\""
-      "# requires \"https://github.com/godot-nim/godotcore >= 0.1.0\""
-      "requires \"godotcore >= 0.1.0\""
->>>>>>> Stashed changes
-
 
 # Dependencies
 
